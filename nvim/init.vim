@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set encoding=UTF-8
 source ~/.config/nvim/plugins.vim
 
 " ============================================================================ "
