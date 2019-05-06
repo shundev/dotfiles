@@ -436,4 +436,16 @@ let g:formatters_python = ['pyfmt']
 autocmd FileType json syntax match Comment +\/\/.\+$+
 au BufRead,BufNewFile *.sbt set filetype=scala
 
+" For denite
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+" coc autocomplete select
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" vim-vue
+autocmd FileType vue syntax sync fromstart
+
+" mouse
+set mouse=a
