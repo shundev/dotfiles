@@ -93,6 +93,7 @@ Plug 'posva/vim-vue'
 Plug 'derekwyatt/vim-scala'
 Plug 'digitaltoad/vim-pug'
 Plug 'wavded/vim-stylus'
+Plug 'keith/swift.vim'
 
 " Initialize plugin system
 call plug#end()

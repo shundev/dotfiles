@@ -343,6 +343,7 @@ noremap - <PageUp>
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>dj <Plug>(coc-implementation)
+nmap <silent> <leader>dm <Plug>(coc-rename)
 
 " === vim-better-whitespace === "
 "   <leader>y - Automatically remove trailing whitespace
@@ -430,8 +431,8 @@ let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
 
 au BufWritePre *.py :Autoformat
-let g:formatdef_pyfmt = "'pipenv run yapf'"
-let g:formatters_python = ['pyfmt']
+"let g:formatdef_pyfmt = "'autopep8'"
+"let g:formatters_python = ['pyfmt']
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 au BufRead,BufNewFile *.sbt set filetype=scala
