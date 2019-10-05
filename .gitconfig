@@ -1,0 +1,24 @@
+[user]
+	name = Shunsuke Hondo
+	email = shunsuke.hondo@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	chp = cherry-pick
+	last = log -p -1
+	check = diff --cached --check
+	diff-cached = diff --cached
+	dc = diff --cached
+	branch-root = merge-base master HEAD
+
+[core]
+	editor = vi
+	whitespace = cr-at-eol
+	excludesfile = /Users/shunsuke/.gitignore_global
+	autoCRLF = input
+
+[color]
+	ui = always
+	diff = always
