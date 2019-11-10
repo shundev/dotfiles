@@ -32,7 +32,7 @@ Plug 'easymotion/vim-easymotion'
 
 " Intellisense Engine
 " Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
@@ -57,21 +57,21 @@ Plug 'tpope/vim-fugitive'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " ReactJS JSX syntax highlighting
-Plug 'mxw/vim-jsx'
+"Plug 'mxw/vim-jsx'
 
 " Generate JSDoc commands based on function signature
-Plug 'heavenshell/vim-jsdoc'
+"Plug 'heavenshell/vim-jsdoc'
 
 " === Syntax Highlighting === "
 
 " Syntax highlighting for nginx
-Plug 'chr4/nginx.vim'
+"Plug 'chr4/nginx.vim'
 
 " Syntax highlighting for javascript libraries
-Plug 'othree/javascript-libraries-syntax.vim'
+"Plug 'othree/javascript-libraries-syntax.vim'
 
 " Improved syntax highlighting and indentation
-Plug 'othree/yajs.vim'
+"Plug 'othree/yajs.vim'
 
 " === UI === "
 " File explorer
@@ -89,11 +89,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'posva/vim-vue'
-Plug 'derekwyatt/vim-scala'
-Plug 'digitaltoad/vim-pug'
-Plug 'wavded/vim-stylus'
-Plug 'keith/swift.vim'
+"Plug 'posva/vim-vue'
+" Plug 'derekwyatt/vim-scala'
+"Plug 'digitaltoad/vim-pug'
+"Plug 'wavded/vim-stylus'
+"Plug 'keith/swift.vim'
 
 " Initialize plugin system
 call plug#end()
