@@ -162,8 +162,8 @@ let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
 let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 
 " Configure error/warning section to use coc.nvim
-let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+"let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+"let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 
 " Hide the Nerdtree status line to avoid clutter
 let g:NERDTreeStatusline = ''
@@ -403,10 +403,10 @@ noremap sv :vs<CR>
 
 colorscheme monokai
 
-noremap <F5> :Autoformat<CR>
-au BufWritePre *.scala :Autoformat
-let g:formatdef_scalafmt = "'scalafmt --stdin'"
-let g:formatters_scala = ['scalafmt']
+"noremap <F5> :Autoformat<CR>
+"au BufWritePre *.scala :Autoformat
+"let g:formatdef_scalafmt = "'scalafmt --stdin'"
+"let g:formatters_scala = ['scalafmt']
 
 au BufWritePre *.py :Autoformat
 "let g:formatdef_pyfmt = "'autopep8'"
@@ -416,8 +416,11 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 " For denite
-let g:python3_host_prog = '/usr/local/bin/python3'
-" let g:python3_host_prog = '/home/shunsuke/.pyenv/shims/python3'
+if has("wsl")
+  let g:python3_host_prog = '/home/shunsuke/.pyenv/shims/python3'
+else
+  let g:python3_host_prog = '/usr/local/bin/python3'
+endif
 
 " coc autocomplete select
 "inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
