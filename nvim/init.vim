@@ -408,7 +408,7 @@ colorscheme monokai
 "let g:formatdef_scalafmt = "'scalafmt --stdin'"
 "let g:formatters_scala = ['scalafmt']
 
-au BufWritePre *.py :Autoformat
+"au BufWritePre *.py :Autoformat
 "let g:formatdef_pyfmt = "'autopep8'"
 "let g:formatters_python = ['pyfmt']
 
@@ -416,11 +416,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 " For denite
-if has("wsl")
-  let g:python3_host_prog = '/home/shunsuke/.pyenv/shims/python3'
-else
-  let g:python3_host_prog = '/usr/local/bin/python3'
-endif
+let g:python3_host_prog = '/usr/bin/python3'
 
 " coc autocomplete select
 "inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
@@ -433,17 +429,17 @@ autocmd FileType vue syntax sync fromstart
 " mouse
 set mouse=a
 
-if has("wsl")
-  let g:clipboard = {
-        \ "name": "win-clip",
-        \ "copy": {
-        \   "+": win32yank.exe -i",
-        \   "*": win32yank.ext -i",
-        \ },
-        \ "paste": {
-        \   "+": win32yank.exe -o",
-        \   "*": win32yank.ext -o",
-        \ },
-        \ "cache_enabled": 1
-        \ }
-endif
+
+set clipboard+=unnamedplus
+let g:clipboard = {
+      \ "name": "win-clip",
+      \ "copy": {
+      \   "+": "win32yank.exe -i --crlf",
+      \   "*": "win32yank.ext -i --crlf",
+      \ },
+      \ "paste": {
+      \   "+": "win32yank.exe -o --lf",
+      \   "*": "win32yank.ext -o --lf",
+      \ },
+      \ "cache_enabled": 0
+      \ }
