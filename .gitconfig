@@ -12,6 +12,7 @@
 	diff-cached = diff --cached
 	dc = diff --cached
 	branch-root = merge-base master HEAD
+	fp = fetch -p
 
 [core]
 	editor = vi
