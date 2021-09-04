@@ -93,7 +93,13 @@ Plug 'Chiel92/vim-autoformat'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'pangloss/vim-javascript'
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
+"Tailwind
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 "Plug 'posva/vim-vue'
 " Plug 'derekwyatt/vim-scala'
