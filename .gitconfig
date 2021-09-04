@@ -12,9 +12,9 @@
 	diff-cached = diff --cached
 	dc = diff --cached
 	branch-root = merge-base master HEAD
-	fp = fetch -p
+	fp = fetch -p --all
         s = stash
-  sp = stash pop
+        sp = stash pop
 
 [core]
 	editor = vi
