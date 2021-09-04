@@ -13,12 +13,15 @@
 	dc = diff --cached
 	branch-root = merge-base master HEAD
 	fp = fetch -p
+        s = stash
+  sp = stash pop
 
 [core]
 	editor = vi
 	whitespace = cr-at-eol
 	excludesfile = /Users/shunsuke/.gitignore_global
-	autoCRLF = input
+	autoCRLF = false
+	fileMode = false
 
 [color]
 	ui = always
