@@ -3,6 +3,10 @@ set encoding=UTF-8
 lang en_US.UTF-8
 source ~/.config/nvim/plugins.vim
 
+" security
+set exrc
+set secure
+
 " ============================================================================ "
 " ===                           EDITING OPTIONS                            === "
 " ============================================================================ "
@@ -143,7 +147,7 @@ try
 
 " === Vim airline ==== "
 " Enable extensions
-let g:airline_extensions = ['branch', 'hunks', 'coc']
+let g:airline_extensions = ['branch', 'hunks', 'coc', 'tabline']
 
 " Update section z to just have line number
 let g:airline_section_z = airline#section#create(['linenr'])
@@ -160,6 +164,9 @@ let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'z', 'warning'
 let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
 
 let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
+
+" tab index
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 " Configure error/warning section to use coc.nvim
 "let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
@@ -403,9 +410,15 @@ set relativenumber
 set list
 set listchars=tab:^\ ,trail:~
 
+autocmd Filetype go setlocal tabstop=2
+
 noremap s <Nop>
 noremap ss :sp<CR>
 noremap sv :vs<CR>
+noremap sj :resize +3<CR>
+noremap sk :resize -3<CR>
+noremap sh :vertical resize +3<CR>
+noremap sl :vertical resize -3<CR>
 
 colorscheme monokai
 
@@ -436,17 +449,14 @@ autocmd FileType vue syntax sync fromstart
 set mouse=a
 
 
-set clipboard+=unnamedplus
-let g:clipboard = {
-      \ "name": "win-clip",
-      \ "copy": {
-      \   "+": "win32yank.exe -i --crlf",
-      \   "*": "win32yank.ext -i --crlf",
-      \ },
-      \ "paste": {
-      \   "+": "win32yank.exe -o --lf",
-      \   "*": "win32yank.ext -o --lf",
-      \ },
-      \ "cache_enabled": 0
-      \ }
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+
+" templates
+autocmd BufNewFile * silent! 0r $HOME/.config/nvim/templates/%:e.tpl
 

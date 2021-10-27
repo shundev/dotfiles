@@ -8,7 +8,8 @@
     "typescriptreact",
     "json",
     "javascriptreact",
-    "vue"
+    "vue",
+    "xml"
   ],
   "eslint.filetypes": [
     "javascript",
@@ -31,5 +32,6 @@
   "javascript.suggestionActions.enabled": true,
   "typescript.suggestionActions.enabled": true,
   "prettier.printWidth": 120,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }
