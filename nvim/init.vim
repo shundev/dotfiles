@@ -449,11 +449,17 @@ autocmd FileType vue syntax sync fromstart
 set mouse=a
 
 
-let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+let s:clip2 = '/home/shunsuke/scripts/clip.exe'
 if executable(s:clip)
     augroup WSLYank
         autocmd!
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+elseif executable(s:clip2)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip2, @0) | endif
     augroup END
 endif
 
