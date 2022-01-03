@@ -31,8 +31,8 @@ Plug 'rstacruz/vim-closer'
 Plug 'easymotion/vim-easymotion'
 
 " Intellisense Engine
-" Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
@@ -89,6 +89,18 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'Chiel92/vim-autoformat'
+
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'pangloss/vim-javascript'
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
+"Tailwind
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+
 "Plug 'posva/vim-vue'
 " Plug 'derekwyatt/vim-scala'
 "Plug 'digitaltoad/vim-pug'

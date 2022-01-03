@@ -12,14 +12,27 @@
 	diff-cached = diff --cached
 	dc = diff --cached
 	branch-root = merge-base master HEAD
-	fp = fetch -p
+	fp = fetch -p --all
+        s = stash
+        sp = stash pop
+	ui =update-index --assume-unchanged
+	nui = update-index --no-assume-unchanged
+	count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
 
 [core]
 	editor = vi
 	whitespace = cr-at-eol
 	excludesfile = /Users/shunsuke/.gitignore_global
-	autoCRLF = input
+	autoCRLF = false
+	fileMode = false
 
 [color]
 	ui = always
 	diff = always
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store

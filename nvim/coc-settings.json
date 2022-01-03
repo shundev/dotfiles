@@ -1,8 +1,22 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["scss", "javascript", "typescript", "typescriptreact", "json", "javascriptreact", "vue"],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "scss",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "vue",
+    "xml"
+  ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
@@ -13,7 +27,11 @@
       "filetypes": ["scala", "sbt"]
     }
   },
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
+  "javascript.suggestionActions.enabled": true,
+  "typescript.suggestionActions.enabled": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }
-
