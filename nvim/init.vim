@@ -221,7 +221,7 @@ let g:signify_sign_delete = '-'
 " === prettier === "
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat_require_pragma = 0
-au BufWritePre *.css,*.html,*.svelte,*.pcss,*.ts,*.js,*.json PrettierAsync
+au BufWritePre *.css,*.html,*.svelte,*.pcss,*.ts,*.js,*.json,*.tsx,*.jsx PrettierAsync
 
 
 " ============================================================================ "
