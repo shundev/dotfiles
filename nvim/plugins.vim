@@ -85,7 +85,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  # error on nvim 0.8.0
 
 Plug 'Chiel92/vim-autoformat'
 
@@ -93,9 +93,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 Plug 'codechips/coc-svelte', {'do': 'npm install'}
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+"Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 "Tailwind
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
